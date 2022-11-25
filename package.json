@@ -1,22 +1,22 @@
 {
-  "name": "vite-typescript-library-starter",
+  "name": "vite-ts-library-starter",
   "version": "0.0.0",
   "description": "...",
-  "license": "Unlicensed",
+  "license": "MIT",
   "keywords": [],
-  "main": "dist/vite-typescript-library-starter.umd.js",
-  "module": "dist/vite-typescript-library-starter.es.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/vite-ts-library-starter.umd.cjs",
+  "module": "dist/vite-ts-library-starter.js",
+  "typings": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/vite-typescript-library-starter.umd.js",
-      "import": "./dist/vite-ts-starter.es.js"
+      "import": "./dist/vite-ts-starter.js",
+      "require": "./dist/vite-ts-library-starter.umd.cjs"
     }
   },
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "prepare": "yarn build",
     "build": "tsc && vite build && tsc -P tsconfig.dts.json",
@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "prettier": "^2.8.0",
-    "prettier-plugin-sorted": "^2.0.0",
     "typescript": "^4.9.3",
     "vite": "^3.2.4"
   }
